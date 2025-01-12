@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Fibonacci {
+    static Scanner sn = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = sn.nextInt();
+        int a = 0, b = 1, c;
+        for (int i = 1; i <= n; i++) {
+            System.out.println(a);
+            c = a + b;
+            a = b;
+            b = c;
+            //count no of digits
+            int num = sn.nextInt();
+            int dig = 0;
+            while (num != 0) {
+                num = num / 10;
+                dig++;
+            }
+            System.out.println(dig);
+        }
+
+
+    }
+}
+
+
+
