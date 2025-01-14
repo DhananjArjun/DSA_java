@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class freq {
+    public static void main(String[] args) {
+        Scanner sn = new Scanner(System.in);
+        int n= sn.nextInt();
+        int dig=sn.nextInt();
+        int f=getDigitFrequency(n,dig);
+        System.out.println("Frequency is:"+f);
+    }
+
+    public static int getDigitFrequency(int n,int dig){
+        int rv=0;
+        while(n>0)
+        {  int d = n%10;
+            n=n/10;
+            if(d==dig)
+                rv++;
+        }
+           return rv;
+    }
+}
+
+
+//Prime factors
+
+import java.util.Scanner;
+public class Prime { //Program to print prime factorization
+
+
+    public static void main(String[] args) {
+         Scanner sn = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n = sn.nextInt();
+        System.out.println("Prime factors are");
+         for(int div=2;div*div<=n;div++) {
+             while (n % div == 0) {
+                 n = n / div;
+                 System.out.print(div + '\t');
+             }
+         }
+             if(n!=1)
+                 System.out.print(n);
+
+    }
+
+}
+
+
+
